@@ -30,3 +30,22 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+.demo-table {
+  width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+  color: #3f51b5;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}

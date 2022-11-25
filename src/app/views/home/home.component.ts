@@ -214,6 +214,10 @@ export class HomeComponent {
     });
   }
 
+  openAppointments(row: any): void {
+    console.log(row);
+  }
+
   editElement(element: Clinica): void {
     this.openDialog(element);
   }
