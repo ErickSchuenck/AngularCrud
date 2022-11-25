@@ -5,3 +5,18 @@
 .container {
   padding: 50px 80px;
 }
+
+.icons {
+  cursor: pointer;
+  transition: 0.5s;
+  color: var(primary);
+}
+
+.icons:hover {
+  transform: scale(1.2);
+}
+
+.button {
+  background-color: #fff;
+  border: none;
+}
