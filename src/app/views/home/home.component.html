@@ -5,9 +5,13 @@
     color="'primary"
     (click)="openDialog(null)"
   >
-    Add New Element
+    Incluir nova clínica
   </button>
   <table mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>id</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
     <ng-container matColumnDef="nome">
       <th mat-header-cell *matHeaderCellDef>Nome</th>
       <td mat-cell *matCellDef="let element">{{ element.nome }}</td>
@@ -45,7 +49,7 @@
       <td mat-cell *matCellDef="let element">{{ element.status }}</td>
     </ng-container>
     <ng-container matColumnDef="preco">
-      <th mat-header-cell *matHeaderCellDef>preco</th>
+      <th mat-header-cell *matHeaderCellDef>preço</th>
       <td mat-cell *matCellDef="let element">{{ element.preco }}</td>
     </ng-container>
 

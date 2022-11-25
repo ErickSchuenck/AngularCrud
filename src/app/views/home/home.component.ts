@@ -166,6 +166,7 @@ export class HomeComponent {
   table!: MatTable<any>;
 
   displayedColumns: string[] = [
+    'id',
     'nome',
     'cnpj',
     'especialidade',
@@ -188,8 +189,19 @@ export class HomeComponent {
       data:
         element === null
           ? {
-              id: null,
-              name: '',
+              id: '',
+              nome: '',
+              cnpj: '',
+              especialidade: '',
+              telefone: '',
+              cep: '',
+              endereco: '',
+              numero: '',
+              bairro: '',
+              cidade: '',
+              estado: '',
+              status: '',
+              preco: '',
             }
           : element,
     });
