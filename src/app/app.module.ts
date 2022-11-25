@@ -8,10 +8,17 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, HeaderComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatTableModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
