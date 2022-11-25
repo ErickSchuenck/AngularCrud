@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { PeriodicElement } from 'src/app/views/home/home.component';
+import { Clinica } from 'src/app/views/home/home.component';
 
 @Component({
   selector: 'app-modal',
@@ -8,11 +8,11 @@ import { PeriodicElement } from 'src/app/views/home/home.component';
   styleUrls: ['./modal.component.css'],
 })
 export class ModalComponent {
-  element!: PeriodicElement;
+  element!: Clinica;
 
   constructor(
     @Inject(MAT_DIALOG_DATA)
-    public data: PeriodicElement,
+    public data: Clinica,
     public dialogRef: MatDialogRef<ModalComponent>
   ) {}
 
