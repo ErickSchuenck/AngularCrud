@@ -185,7 +185,7 @@ export class HomeComponent {
   ngOnInit(): void {}
   openDialog(element: Clinica | null): void {
     const dialogRef = this.dialog.open(ModalComponent, {
-      width: '260px',
+      width: '460px',
       data:
         element === null
           ? {
@@ -212,6 +212,10 @@ export class HomeComponent {
         this.table.renderRows();
       }
     });
+  }
+
+  editElement(element: Clinica): void {
+    this.openDialog(element);
   }
 
   deleteElement(id: number): void {
