@@ -1,4 +1,5 @@
-<h1 mat-dialog-title>Create Element</h1>
+<h1 mat-dialog-title *ngIf="!isChange">Cadastrar Clínica</h1>
+<h1 mat-dialog-title *ngIf="isChange">Editar Clínica</h1>
 <div mat-dialog-content>
   <mat-form-field>
     <mat-label>Id</mat-label>
@@ -42,6 +43,22 @@
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onCancel()">Cancel</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Confirm</button>
+  <button
+    class="button"
+    mat-button
+    [mat-dialog-close]="data"
+    cdkFocusInitial
+    *ngIf="!isChange"
+  >
+    Cadastrar
+  </button>
+  <button
+    class="button"
+    mat-button
+    [mat-dialog-close]="data"
+    cdkFocusInitial
+    *ngIf="isChange"
+  >
+    Editar
+  </button>
 </div>

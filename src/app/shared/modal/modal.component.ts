@@ -9,6 +9,7 @@ import { Clinica } from 'src/app/views/home/home.component';
 })
 export class ModalComponent {
   element!: Clinica;
+  isChange!: boolean;
 
   constructor(
     @Inject(MAT_DIALOG_DATA)
@@ -16,7 +17,13 @@ export class ModalComponent {
     public dialogRef: MatDialogRef<ModalComponent>
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.data.nome !== '') {
+      this.isChange = true;
+    } else {
+      this.isChange = false;
+    }
+  }
 
   onCancel(): void {
     this.dialogRef.close();
